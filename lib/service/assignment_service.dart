@@ -20,4 +20,6 @@ class AssignmentService {
     // print(assignment.fileName); // now should print correctly
     return assignmentResponse;
   }
+
+  fetchEvents() {}
 }

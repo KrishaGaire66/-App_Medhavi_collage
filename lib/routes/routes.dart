@@ -4,19 +4,16 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medhavi/screen/animation/blury_route.dart';
-import 'package:medhavi/screen/assignmentscreen.dart';
-import 'package:medhavi/screen/attendancescreen.dart';
-import 'package:medhavi/screen/downloadscreen.dart';
-import 'package:medhavi/screen/home_screen.dart';
-import 'package:medhavi/screen/libraryscreen.dart';
-import 'package:medhavi/screen/login_screen.dart';
+import 'package:medhavi/screen/assignmentscreen/components/assignmentscreen.dart';
+import 'package:medhavi/screen/homescreen/components/home_screen.dart';
+import 'package:medhavi/screen/loginscreen/components/login_screen.dart';
 import 'package:medhavi/screen/main_activity.dart';
-import 'package:medhavi/screen/onbording_screen.dart';
-import 'package:medhavi/screen/profileeditscreen.dart';
-import 'package:medhavi/screen/profilescreen.dart';
-import 'package:medhavi/screen/readingmaterialscreen.dart';
-import 'package:medhavi/screen/signup_screen.dart';
-import 'package:medhavi/screen/splas_screen.dart';
+import 'package:medhavi/screen/onbordingscreen/onboarding_screen.dart';
+import 'package:medhavi/screen/profileeditscreen/profileeditscreen.dart';
+import 'package:medhavi/screen/profilescreen/components/profilescreen.dart';
+import 'package:medhavi/screen/signupscreen/components/signup_screen.dart';
+import 'package:medhavi/screen/splasscreen/components/splash_screen.dart';
+
 
 
 
@@ -77,17 +74,17 @@ class Routes {
         break;
 
       case splash:
-        return BlurredRouter(builder: (context) => const SplasScreen());
+        return BlurredRouter(builder: (context) => const SplashScreen());
       case onboarding:
         return CupertinoPageRoute(
           builder: (context) => const OnboardingScreen(),
         );
-      case home:
-        return CupertinoPageRoute(
-          builder: (context) => const HomeScreen(
-        //    from: 'main',
-          ),
-        );
+      // case home:
+      //   return CupertinoPageRoute(
+      //     builder: (context) => const HomeScreen(
+      //   //    from: 'main',
+      //     ),
+      //   );
       case main:
          return CupertinoPageRoute(
           builder: (context) => MainActivity(),

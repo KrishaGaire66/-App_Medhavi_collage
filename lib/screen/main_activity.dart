@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:medhavi/screen/calenderscreen.dart';
-import 'package:medhavi/screen/feesscreen.dart';
-import 'package:medhavi/screen/home_screen.dart';
-import 'package:medhavi/screen/menuscreen.dart';
-import 'package:medhavi/screen/noticescreen.dart';
-import 'package:medhavi/screen/profilescreen.dart';
-import 'package:medhavi/screen/profileeditscreen.dart';
+import 'package:medhavi/connectivity/example_internet_check.dart';
+import 'package:medhavi/screen/calenderscreen/components/calender_screen.dart';
+import 'package:medhavi/screen/calenderscreen/components/calenderscreen.dart';
+import 'package:medhavi/screen/feesccreen/components/feesscreen.dart';
+import 'package:medhavi/screen/homescreen/components/home_screen.dart';
+import 'package:medhavi/screen/menuitems/components/menuscreen.dart';
+import 'package:medhavi/screen/noticescreen/components/noticescreen.dart';
+
 
 class MainActivity extends StatefulWidget {
   const MainActivity({super.key});
@@ -22,9 +23,8 @@ class MainActivityState extends State<MainActivity>
   final List<Widget> _screens = [
     NoticeScreen(),
     CalendarScreen(),
-    HomeScreen(),
-    FeesScreen(),
-    MenuScreen(),
+     HomeScreen(),
+   FeesScreen(),
   ];
 
   final PageController _pageController = PageController(initialPage: 2);
@@ -70,9 +70,16 @@ class MainActivityState extends State<MainActivity>
             label: 'Dashboard',
           ),
           BottomNavigationBarItem(icon: Icon(Icons.feed), label: 'Fees'),
-          BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
+          // BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+

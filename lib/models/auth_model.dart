@@ -8,6 +8,8 @@ class Welcome {
     required this.user,
     required this.status,
   });
+  
+
 
   // Ensure you handle the deserialization properly
   factory Welcome.fromJson(Map<String, dynamic> json) {
